@@ -7,6 +7,7 @@ namespace Dishes.Domain.Entities;
 public class Category: BaseEntity
 {
     public string Description { get; private set; }
+    public IEnumerable<Dish> Dishes { get; set; }
 
     public Category(Guid id, string name, string description, DateTime createdAt, string createdBy) : base(id, name, createdAt, createdBy)
     {
